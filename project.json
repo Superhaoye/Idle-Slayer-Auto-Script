@@ -1,0 +1,8 @@
+{
+  "name": "Idle Slayer Auto Script",
+  "main": "main.js",
+  "ignore": ["build"],
+  "packageName": "com.m4kura",
+  "versionName": "1.0.0",
+  "versionCode": 1
+}
