@@ -13,7 +13,7 @@ if (auto.service == null) {
 // launch("com.pabloleban.IdleSlayer");
 // waitForPackage("com.pabloleban.IdleSlayer");
 
-let mode = 1;
+let mode = -1;
 let screenMode = 0; // 0 竖屏 1 横屏
 let jumpContr = 0;
 let modeChange = false;
