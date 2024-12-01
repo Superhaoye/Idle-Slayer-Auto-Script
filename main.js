@@ -35,11 +35,11 @@ let speedUpButten = {
 };
 let monsterWarn = {
   px: 1160,
-  py: 1650,
+  py: 1700,
   color: "#ee4151",
-  epx: 20,
-  epy: 40,
-  threshold: 10,
+  epx: 30,
+  epy: 100,
+  threshold: 15,
 };
 let mainPackage = {
   px: 80,
@@ -211,14 +211,14 @@ function startWarnStopThread() {
 
       try {
         if (obtainObj(img, monsterWarn)) {
-          // log("jumpCnt " + jumpContr);
+          log("jumpCnt " + jumpContr);
           jumpContr += 1;
-          sleep(800);
+          sleep(900);
         }
       } catch (error) {
         log(error);
       }
-      sleep(200);
+      sleep(130);
     }
   });
 }
