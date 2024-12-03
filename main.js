@@ -128,7 +128,6 @@ function main() {
     } else {
       if (mode == -1) continue;
 
-      toastLog("gameMode: " + gameMode);
       if (gameMode == 0) {
         normalMode();
       } else if (gameMode == 1) {
