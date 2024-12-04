@@ -105,7 +105,8 @@ let jumpContr = 0;
 let modeChange = false;
 // 0 正常游戏页面  1 夺宝奇兵 2 挑战模式
 let gameMode = 0,
-  dbqbCnt = 0;
+  dbqbCnt = 0,
+  archeryMode = 1;
 
 main();
 
@@ -120,7 +121,7 @@ function main() {
   else screenMode = 0;
 
   for (;;) {
-    sleep(1000);
+    sleep(archeryMode == 1 ? 400 : 800);
     // log("script keep running");
     if (modeChange) {
       // changeModeFun();
@@ -150,6 +151,7 @@ function dbqbMode() {
       dbqbStart.px + (dbqbCnt % 3) * 275,
       dbqbStart.py + parseInt(dbqbCnt / 3) * 280
     );
+  sleep(500);
   dbqbCnt++;
   if (dbqbCnt > 15) {
     swipe(
@@ -224,7 +226,11 @@ function handlejump() {
     jumpContr = --jumpContr < 0 ? 0 : jumpContr;
     return;
   }
-  click(600, 1000);
+
+  press(600 + random(-10, 10), 1000 + random(-10, 10), 60);
+  if (archeryMode == -1) sleep(400);
+  press(600 + random(-10, 10), 1000 + random(-10, 10), 60);
+  archeryMode *= -1;
 }
 
 function returnMain() {
